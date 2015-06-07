@@ -22,7 +22,7 @@ public class PlayerImpl implements Player {
         }
         calculateScore();
     }
-    
+
     public boolean stand() {
         stand = true;
         return stand;
