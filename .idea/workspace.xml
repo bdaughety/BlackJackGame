@@ -4,24 +4,15 @@
     <list default="true" id="bcdd8ae8-617c-4133-8bdb-92cb24cb1695" name="Default" comment="initial import on bdaughety; added CardEnum">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlackJack/target/test-classes/blackJackPackage/PlayerImplUnitTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlackJack/src/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlackJackGame-bdaughety.iml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/CardEnum.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlackJack/src/test/java/blackJackPackage/PlayerImplUnitTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler-bdaughety.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc-bdaughety.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules-bdaughety.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs-bdaughety.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace-bdaughety.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/target/classes/blackJackPackage/BlackJackCard.class" afterPath="$PROJECT_DIR$/BlackJack/target/classes/blackJackPackage/BlackJackCard.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/target/classes/blackJackPackage/Player.class" afterPath="$PROJECT_DIR$/BlackJack/target/classes/blackJackPackage/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/target/classes/blackJackPackage/PlayerImpl.class" afterPath="$PROJECT_DIR$/BlackJack/target/classes/blackJackPackage/PlayerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/BlackJackCard.java" afterPath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/BlackJackCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJackGame.iml" afterPath="$PROJECT_DIR$/BlackJackGame.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/Card.java" afterPath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/Card.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/Player.java" afterPath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/PlayerImpl.java" afterPath="$PROJECT_DIR$/BlackJack/src/main/java/blackJackPackage/PlayerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/pom.xml" afterPath="$PROJECT_DIR$/BlackJack/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BlackJackGame.iws" />
@@ -529,6 +520,13 @@
       <option name="number" value="Default" />
       <updated>1438552375220</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial import on bdaughety; added CardEnum">
+      <created>1438557224788</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1438557224788</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
