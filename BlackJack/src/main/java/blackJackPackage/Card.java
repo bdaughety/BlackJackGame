@@ -5,10 +5,10 @@ public class Card {
     protected int value;
     private boolean drawn = false;
 
-    Card(char s, int v)
+    Card(char suit, int value)
     {
-        suit = s;
-        value = v;
+        this.suit = suit;
+        this.value = value;
     }
 
     void drawn()
@@ -23,7 +23,7 @@ public class Card {
 
     String getCardName()
     {
-		String cardName = "", cardValue = "", cardSuit = "";
+		String cardName, cardValue = "", cardSuit = "";
 
 		switch (value)
 		{

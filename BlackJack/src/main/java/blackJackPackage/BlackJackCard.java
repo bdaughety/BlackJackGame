@@ -1,7 +1,7 @@
 package blackJackPackage;
 
 public class BlackJackCard extends Card{
-	private int cardValue = 0;
+	private int cardValue;
 
 	public BlackJackCard(char newSuit, int newValue)
     {
@@ -13,7 +13,7 @@ public class BlackJackCard extends Card{
 		switch (value)
 		{
 			case 0:
-				cardValue = 1;
+				cardValue = 11;
 				break;
 			case 1:
 				cardValue = 2;
@@ -43,7 +43,7 @@ public class BlackJackCard extends Card{
 			case 10:
 			case 11:
 			case 12:
-				cardValue = 10;;
+				cardValue = 10;
 				break;
 		}
 
