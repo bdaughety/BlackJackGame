@@ -4,7 +4,7 @@ public interface Player {
     Integer BLACK_JACK_SCORE = 21;
     Integer PERFECT_SCORE_WITH_ACE = 31;
 
-    void hit(BlackJackCard blackJackCard);
+    void hit(CardEnum cardEnum);
     void stand();
     boolean isStanding();
     Integer calculateScore();

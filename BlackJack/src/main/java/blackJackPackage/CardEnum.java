@@ -1,6 +1,7 @@
 package blackJackPackage;
 
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public enum CardEnum {
 
@@ -57,16 +58,34 @@ public enum CardEnum {
     QUEEN_OF_HEARTS(10, "Queen", "Hearts"),
     KING_OF_HEARTS(10, "King", "Hearts");
 
-    private int value;
+    private int blackJackValue;
     private String cardName;
+    private String cardSuit;
+    private static Map<String, CardEnum> cardEnumMap;
 
-    CardEnum(int value, String cardName, String suit) {
-        this.value = value;
-        this.cardName = cardName;
+    static {
+        cardEnumMap = new HashMap<String, CardEnum>();
+        for (CardEnum e : CardEnum.values()) {
+            cardEnumMap.put(e.name(), e);
+        }
     }
 
-    public int value() {
-        return value;
+    public static CardEnum getCardEnumForName(final String name) {
+        return cardEnumMap.get(name);
+    }
+
+    CardEnum(int blackJackValue, String cardName, String cardSuit) {
+        this.blackJackValue = blackJackValue;
+        this.cardName = cardName;
+        this.cardSuit = cardSuit;
+    }
+
+    public String getCardLabel() {
+        return cardName + " of " + cardSuit;
+    }
+
+    public int blackJackValue() {
+        return blackJackValue;
     }
 
     public String cardName() {

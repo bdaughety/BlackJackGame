@@ -6,14 +6,14 @@ import java.util.List;
 public class PlayerImpl implements Player {
     private Integer score;
     private Integer handSize;
-    private List<BlackJackCard> playerHand;
+    private List<CardEnum> playerHand;
     private boolean isStanding = false;
     private boolean blackJack;
     private boolean busted;
 
-    public void hit(BlackJackCard newCard) {
+    public void hit(CardEnum newCard) {
         if (playerHand == null || playerHand.isEmpty()) {
-            playerHand = new ArrayList<BlackJackCard>();
+            playerHand = new ArrayList<CardEnum>();
         }
         if (!isStanding && !hasBlackJack() && !hasBusted()) {
             playerHand.add(newCard);
@@ -33,8 +33,8 @@ public class PlayerImpl implements Player {
     public Integer calculateScore() {
         score = 0;
         if (playerHand != null && !playerHand.isEmpty()) {
-            for (BlackJackCard blackJackCard : playerHand) {
-                score += blackJackCard.getCardValue();
+            for (CardEnum cardEnum : playerHand) {
+                score += cardEnum.blackJackValue();
                 hasBusted();
                 hasBlackJack();
             }
@@ -75,8 +75,8 @@ public class PlayerImpl implements Player {
     }
 
     public boolean handContainsAnAce() {
-        for (BlackJackCard blackJackCard : getPlayerHand()) {
-            if (blackJackCard.getCardName().equalsIgnoreCase("ace")) {
+        for (CardEnum cardEnum : getPlayerHand()) {
+            if (cardEnum.cardName().equals(CardEnum.ACE_OF_CLUBS.cardName())) {
                 return true;
             }
         }
@@ -95,9 +95,9 @@ public class PlayerImpl implements Player {
         return handSize;
     }
 
-    public List<BlackJackCard> getPlayerHand() {
+    public List<CardEnum> getPlayerHand() {
         if (playerHand == null || playerHand.isEmpty()) {
-            playerHand = new ArrayList<BlackJackCard>();
+            playerHand = new ArrayList<CardEnum>();
         }
         return playerHand;
     }

@@ -8,58 +8,44 @@ import static org.junit.Assert.*;
 
 public class PlayerImplUnitTest {
     private PlayerImpl player;
-    private BlackJackCard sixOfClubs;
-    private BlackJackCard aceOfHearts;
-    private BlackJackCard tenOfDiamonds;
-    private BlackJackCard fourOfSpades;
-    private BlackJackCard twoOfClubs;
 
     @Before
     public void setup() {
         player = new PlayerImpl();
-        sixOfClubs = new BlackJackCard('c', 5);
-        aceOfHearts = new BlackJackCard('h', 0);
-        tenOfDiamonds = new BlackJackCard('d', 9);
-        fourOfSpades = new BlackJackCard('s', 5);
-        twoOfClubs = new BlackJackCard('c', 1);
     }
 
     @After
     public void destroy() {
         player = null;
-        sixOfClubs = null;
-        aceOfHearts = null;
-        tenOfDiamonds = null;
-        fourOfSpades = null;
     }
 
     @Test
     public void testHit() throws Exception {
         assertTrue(player.getHandSize() == 0);
 
-        player.hit(sixOfClubs);
+        player.hit(CardEnum.SIX_OF_CLUBS);
         assertTrue(player.getHandSize() == 1);
 
         player.resetHand();
-        player.hit(aceOfHearts);
-        player.hit(tenOfDiamonds);
+        player.hit(CardEnum.ACE_OF_HEARTS);
+        player.hit(CardEnum.TEN_OF_DIAMONDS);
         assertTrue(player.getHandSize() == 2);
 
-        player.hit(sixOfClubs);
+        player.hit(CardEnum.SIX_OF_CLUBS);
         assertTrue(player.getHandSize() == 2);
 
         player.resetHand();
-        player.hit(tenOfDiamonds);
-        player.hit(sixOfClubs);
-        player.hit(aceOfHearts);
+        player.hit(CardEnum.TEN_OF_DIAMONDS);
+        player.hit(CardEnum.SIX_OF_CLUBS);
+        player.hit(CardEnum.ACE_OF_HEARTS);
         assertTrue(player.getHandSize() == 3);
 
         player.resetHand();
-        player.hit(fourOfSpades);
-        player.hit(sixOfClubs);
-        player.hit(tenOfDiamonds);
+        player.hit(CardEnum.FOUR_OF_SPADES);
+        player.hit(CardEnum.SIX_OF_CLUBS);
+        player.hit(CardEnum.TEN_OF_DIAMONDS);
         player.stand();
-        player.hit(aceOfHearts);
+        player.hit(CardEnum.ACE_OF_HEARTS);
         assertTrue(player.getHandSize() == 3);
     }
 
@@ -73,19 +59,19 @@ public class PlayerImplUnitTest {
         player.resetHand();
         assertTrue(!player.isStanding());
 
-        player.hit(aceOfHearts);
-        player.hit(tenOfDiamonds);
+        player.hit(CardEnum.ACE_OF_HEARTS);
+        player.hit(CardEnum.TEN_OF_DIAMONDS);
         assertTrue(player.isStanding());
 
         player.resetHand();
-        player.hit(sixOfClubs);
+        player.hit(CardEnum.SIX_OF_CLUBS);
         assertTrue(!player.isStanding());
 
-        player.hit(tenOfDiamonds);
+        player.hit(CardEnum.TEN_OF_DIAMONDS);
         assertTrue(!player.isStanding());
 
-        player.hit(twoOfClubs);
-        player.hit(fourOfSpades);
+        player.hit(CardEnum.TWO_OF_CLUBS);
+        player.hit(CardEnum.FOUR_OF_SPADES);
         assertTrue(player.isStanding());
 
 
