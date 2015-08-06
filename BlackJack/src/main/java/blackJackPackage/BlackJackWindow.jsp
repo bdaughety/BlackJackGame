@@ -1,7 +1,10 @@
 <%@ taglib uri="/struts-tags-extd" prefix="s"%>
+<!DOCTYPE html>
 
 <html>
-<head><title>Hello World</title></head>
+<head>
+<title>Hello World</title>
+</head>
 <body>
 Hello World!<br/>
 <%
